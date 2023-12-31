@@ -1,0 +1,1 @@
+this repo will contain all data structure algo notes and programs from various platform.
