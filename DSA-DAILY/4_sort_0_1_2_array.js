@@ -3,8 +3,11 @@
  * Approach 1: Count the number of 0s, 1s and 2s in the array and then store them in the array.
 
 Keep three counters c0 to count 0s, c1 to count 1s and c2 to count 2s.
-Traverse through the array and increase the count of c0 if the element is 0, increase the count of c1 if the element is 1 and increase the count of c2 if the element is 2.
-Now again traverse the array and replace the first c0 elements with 0, next c1 elements with 1 and next c2 elements with 2.
+Traverse through the array and increase the count of c0 if the element is 0,
+ increase the count of c1 if the element is 1 and increase the count of c2 
+ if the element is 2.
+Now again traverse the array and replace the first c0 elements with 0,
+ next c1 elements with 1 and next c2 elements with 2.
 Return the array.
  */
 
