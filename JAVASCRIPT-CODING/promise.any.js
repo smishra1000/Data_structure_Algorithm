@@ -31,22 +31,22 @@ const p1 = new Promise((resolve, reject) => {
 
 // 2) One promise rejected example
 
-const p1 = new Promise((resolve, reject) => {
+const p11 = new Promise((resolve, reject) => {
   setTimeout(() => {
     console.log('Promise 1 rejected');
     reject('error');
   }, 1000);
 });
 
-const p2 = new Promise((resolve, reject) => {
+const p22 = new Promise((resolve, reject) => {
   setTimeout(() => {
     console.log('Promise 2 fulfilled');
     resolve(2);
   }, 2000);
 });
 
-const p = Promise.any([p1, p2]);
-p.then((value) => {
+const pp = Promise.any([p1, p2]);
+pp.then((value) => {
   console.log('Returned Promise');
   console.log(value);
 });
@@ -56,22 +56,22 @@ p.then((value) => {
 
 // 3) All promises rejected example
 
-const p1 = new Promise((resolve, reject) => {
+const p12 = new Promise((resolve, reject) => {
     setTimeout(() => {
       console.log('Promise 1 rejected');
       reject('error1');
     }, 1000);
   });
   
-  const p2 = new Promise((resolve, reject) => {
+  const p21 = new Promise((resolve, reject) => {
     setTimeout(() => {
       console.log('Promise 2 rejected');
       reject('error2');
     }, 2000);
   });
   
-  const p = Promise.any([p1, p2]);
-  p.catch((e) => {
+  const p0 = Promise.any([p1, p2]);
+  p0.catch((e) => {
     console.log('Returned Promise');
     console.log(e, e.errors);
   });
